@@ -1,6 +1,7 @@
 local Library = {};
 local Font_Old = Enum.Font.GothamBold
-local Path = game:GetService("RunService"):IsStudio() and game.Players.LocalPlayer.PlayerGui or game.CoreGui
+local Path = game:GetService("RunService"):IsStudio() and game.Players.LocalPlayer.PlayerGui or (gethui ~= nil) and gethui() or game.CoreGui
+print(Path)
 local Tick = tick() 
 
 repeat wait() until game:IsLoaded(); 
